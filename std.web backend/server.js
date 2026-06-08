@@ -12,6 +12,9 @@ const app          = express();
 const PORT         = process.env.PORT || 5000;
 const JWT_SECRET   = process.env.JWT_SECRET || 'student_admin_secret_2024';
 const FRONTEND_URL = process.env.FRONTEND_URL || '*';
+app.get('/', (req, res) => {
+  res.send('Server is running successfully!');
+});
 
 // ── Cloudinary Config ─────────────────────────────────────────
 cloudinary.config({
